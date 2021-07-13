@@ -1,0 +1,29 @@
+{
+  "contador": 3,
+  "noticias": [
+    {
+      "titulo": "hola mundo",
+      "descripcion": "probando formidable",
+      "categoria": "Mundo",
+      "fecha": "2021-07-11",
+      "id": 1,
+      "imagen": "img/1.jpeg"
+    },
+    {
+      "titulo": "otra noticia",
+      "descripcion": "otra descripción",
+      "categoria": "Arte",
+      "fecha": "2021-07-22",
+      "id": 2,
+      "imagen": "img/2.jpeg"
+    },
+    {
+      "titulo": "Carlos Palotti",
+      "descripcion": "Cómo vivir sin laburar",
+      "categoria": "Arte",
+      "fecha": "2021-07-12",
+      "id": 3,
+      "imagen": "img/3.jpeg"
+    }
+  ]
+}

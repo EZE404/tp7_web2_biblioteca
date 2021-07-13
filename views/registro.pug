@@ -1,0 +1,38 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Insertar Noticia
+    body
+        div(style="margin: 0 auto; width: 400px; border: 1px solid black; padding: 10px;")
+            form(action="guardarForm", method="post" enctype="multipart/form-data")
+                label(for="titulo") Título
+                br
+                input#titulo(type="text", name="titulo")
+                hr
+                br
+                label(for="descripcion") Descripción
+                br
+                input#descripcion(type="text", name="descripcion")
+                hr
+                br
+                label(for="categoria") Categoría 
+                select#categoria(name="categoria")
+                    each categoria in categorias
+                        option(value=categoria) #{categoria}
+                hr
+                br
+                label(for="fecha") Fecha
+                br
+                input#fecha(type="date" name="fecha")
+                hr
+                br
+                label(for="imagen") Imagen
+                br
+                input#imagen(type="file", name="imagen")
+                hr
+                br
+                input(type="submit", value="Subir")
+            

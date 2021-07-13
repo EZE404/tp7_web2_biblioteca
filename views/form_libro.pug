@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Insertar Noticia
+    body
+        div(style="margin: 0 auto; width: 400px; border: 1px solid black; padding: 10px;")
+            form(action="alta_autor", method="post" enctype="multipart/form-data")
+                label(for="isbn") ISBN 
+                input#dni(type="text", name="isbn")
+                hr
+                br
+                label(for="titulo") Titulo 
+                input#titulo(type="text", name="titulo") 
+                hr
+                br
+                label(for="paginas") Cantidad de Paginas 
+                input#paginas(type="number", name="paginas", min='0', value='0', step='1') 
+                hr
+                br
+                label(for="descripcion") Descripcion
+                br
+                textarea#descripcion(name="biografia", cols="52", rows="10")
+                hr
+                br 
+                label(for="genero") Genero 
+                select#genero(name="categoria")
+                    each genero in generos
+                        option(value=genero) #{genero}
+                hr
+                br
+                label(for="anio") Año 
+                input(type='number', name='anio', min='1900', max=new Date().getFullYear(), step='1', value=new Date().getFullYear())
+                br
+                hr
+                // div.class=autores y aca le vamos generando dentro los select y etc
+                label(for="autor") Autores 
+                select#autor(name="autor")
+                    each autor in autores
+                        option(value=autor) #{autor}
+                br
+                label(for="participacion") Participacion
+                // boton agregar otro autor
+                input#participacion(type="number", name="participacion") 
+                input(type="submit", value="Subir")
+            
